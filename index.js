@@ -10,7 +10,8 @@ module.exports = function (babel) {
           const prop = node.property;
           if (
             !node.computed &&
-            prop.name === 'default'
+            prop.name === 'default' &&
+            node.object.name !== 'exports'
           ) {
             console.log(prop)
             // foo.default -> foo["default"]
