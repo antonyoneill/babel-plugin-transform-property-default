@@ -1,4 +1,6 @@
-export default function (babel) {
+"use strict";
+
+module.exports = function (babel) {
   const { types: t } = babel;
 
   return {
